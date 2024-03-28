@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MISCELÁNEA EJERCICIOS PROGRAMACIÓN</title>
+    <script src="funciones.js"></script>
+</head>
+
+<body>
+    <script>
+        let menu = "MISCELÁNEA EJERCICIOS PROGRAMACIÓN\n";
+        menu += "1. Operadores\n";
+        menu += "2. Condicionales\n";
+        menu += "3. Ciclos\n";
+        menu += "4. Salir\n";
+
+        let opciones = parseInt(prompt(menu + "Ingrese el numero de la opción que desee:"));
+
+        switch (opciones) {
+            case 1:
+                let operadores = "Ejercicios de Operadores\n";
+                
+                operadores += "a. Calcular el área de un triángulo. \n";
+                operadores += "b. Ingresar dos números por teclado y sumarlos.\n";
+                operadores += "c. Ingresar un número y visualizar el número elevado al cuadrado.\n";
+                operadores += "d. Escribir un algoritmo que convierta de euros a dólares. \n";
+                operadores += "e. Escribir un algoritmo que pida el lado de un cuadrado y muestre el valor del área y del perímetro \n";
+                operadores += "f. Escribir un algoritmo que determine el área y el volúmen de un cilindro.\n";
+                operadores += "g. Realizar un algoritmo que lea el radio de una circunferencia y escriba la longitud de la misma y el área (pi*r)^2 del círculo inscrito.\n";
+                operadores += "h. Calcular el promedio de tres (3) números ingresados por teclado\n";
+
+                let ope = prompt(operadores + "Ingrese una opción:");
+
+                switch (ope) {
+                    case 'a':
+                        document.write("a.Calcular el área de un triángulo.<br>");
+                        document.write("El resultado del área del triángulo es: " + area());
+                        break;
+                    case 'b':
+                        document.write("b.Ingresar dos números por teclado y sumarlos.<br>");
+                        document.write("El resultado de la suma es: " + suma());
+                        break;
+                    case 'c':
+                    document.write("c.Ingresar un número y visualizar el número elevado al cuadrado.<br>");
+                        document.write("El numero elevado al cuadrado es : " + cuadrado());
+                        break;
+                    case 'd':
+                    document.write("d.Escribir un algoritmo que convierta de euros a dólares.<br>");
+                        document.write("El cambio de euros a dolares es: " + dolares());
+                        break;
+                    case 'e':
+                    document.write("e.Escribir un algoritmo que pida el lado de un cuadrado y muestre el valor del área y del perímetro.<br>");
+                        let resultados = lado();
+                        document.write("El área del cuadrado es: " + resultados[0] + "<br>");
+                        document.write("El perímetro del cuadrado es: " + resultados[1]);
+                        break;
+                    case 'f':
+                    document.write("f.Escribir un algoritmo que determine el área y el volúmen de un cilindro.<br>");
+                        let resultados_cilindro = cilindro();
+                        document.write("El área del cilindro es: " + resultados_cilindro[0] + "<br>");
+                        document.write("El volumen del cilindro es: " + resultados_cilindro[1]);
+                        break;
+                    case 'g':
+                    document.write("g.Realizar un algoritmo que lea el radio de una circunferencia y escriba la longitud de la misma y el área (pi*r)^2 del círculo inscrito.<br>");
+                        let resultados_circunferencia = circunferencia();
+                        document.write("la longitud de la circunferencia es:" + resultados_circunferencia[0] + "<br>");
+                        document.write("El area de la circunferencia es : " + resultados_circunferencia[1]);
+                        break;
+                    case 'h':
+                    document.write("h.Calcular el promedio de tres (3) números ingresados por teclado.<br>");
+                        document.write("el promedio de tres notas es " + promedio());
+                        break;
+                    default:
+                        document.write("Opción no válida");
+                }
+                break;
+
+
+
+
+
+
+
+
+            case 2:
+                let condicionales = "Ejercicios de Condicionales\n";
+                condicionales += "a. Escribir un algoritmo para saber si el número ingresado por teclado es positivo o negativo.\n";
+                condicionales += "b. Escribir un algoritmo que reciba dos números por teclado y diga cuál es el mayor y cuál el menor.\n";
+                condicionales += "c. Escribir un programa que lea tres números enteros positivos y que calcule e imprima en pantalla el menor y el mayor de ellos.\n";
+                condicionales += "d. Dados dos números A y B, sumarlos si A es menor que B o sino restarlos.\n";
+                condicionales += "e. Dados dos números A y B encontrar el cociente entre A y B. Recordar que la división por cero no está definida, en ese caso debe aparecer una leyenda anunciando que la división no es posible.\n";
+                condicionales += "f. Dados dos números A y B, sumarlos si al menos uno de ellos es negativo, en caso contrario multiplicarlos.\n";
+                condicionales += "g. Escribir un algoritmo que determine si un año es bisiesto o no.\n";
+
+                let con = prompt(condicionales + "Ingrese una opción:");
+
+                switch (con) {
+                    case 'a':
+                    document.write(" a. Escribir un algoritmo para saber si el número ingresado por teclado es positivo o negativo.<br>")
+                    document.write("Resultado de la operación: " + positivo_negativo());
+                        break;
+                    case 'b':
+                    document.write("b. Escribir un algoritmo que reciba dos números por teclado y diga cuál es el mayor y cuál el menor.<br>")
+                    let resultados_mayor_menor= mayor_menor();
+                        document.write(resultados_mayor_menor[0] + "<br>");
+                        document.write(resultados_mayor_menor[1]);
+                        break;
+                    case 'c':
+                    document.write("c. Escribir un programa que lea tres números enteros positivos y que calcule e imprima en pantalla el menor y el mayor de ellos.<br>")
+                    let resultados_numeros_enteros= numeros_enteros();
+                        document.write(resultados_numeros_enteros[0] + "<br>");
+                        document.write(resultados_numeros_enteros[1]);
+                        break;
+
+                    case 'd':
+                    document.write(" d. Dados dos números A y B, sumarlos si A es menor que B o sino restarlos.<br>")
+                    document.write( numerosAYB());
+                        break;
+                    case 'e':
+                    document.write(" e. Dados dos números A y B encontrar el cociente entre A y B. Recordar que la división por cero no está definida, en ese caso debe aparecer una leyenda anunciando que la división no es posible.<br>")
+                    document.write("" + conciente());
+                        break;
+                        case 'f':
+                        document.write("f. Dados dos números A y B, sumarlos si al menos uno de ellos es negativo, en caso contrario multiplicarlos.<br>")
+                    document.write("" +  suma_multiplicar());
+                        break;
+
+                        case 'g':
+                        document.write("g. Escribir un algoritmo que determine si un año es bisiesto o no.<br>")
+                    document.write("el año " +  año());
+                        break;
+                        
+                       
+                }
+                break;
+
+
+
+                
+            case 3:
+                let ciclos = "Ejercicios de ciclos:\n";
+                ciclos += "a. Imprimir todos los múltiplos de 3 que hay entre 1 y 100. \n";
+                ciclos += "b. Imprimir los números impares entre 0 y 100.\n";
+                ciclos += "c. Imprimir los números pares del 1 al 100.\n";
+                ciclos += "d. Escribir un programa que imprima por pantalla los cuadrados de los números del 1 al 30.\n";
+                ciclos += "e. Escribir un programa que sume los cuadrados de los cien primeros números naturales, mostrando el resultado en pantalla.\n";
+                ciclos += "f. Dados dos números naturales, el primero menor que el segundo, generar y mostrar todos los números comprendidos entre ellos en secuencia ascendente.\n";
+                ciclos += "g. Sumar todos los números que se digitan por teclado mientras no sea cero.\n";
+
+                let cic = prompt(ciclos + "Ingrese una opción:");
+
+                switch (cic) {
+                    case 'a':
+                    document.write("a.Imprimir todos los múltiplos de 3 que hay entre 1 y 100.  <br>")
+                    document.write("los múltiplos de 3 que hay entre 1 y 100 son:" +  multiplo3());
+                        break;
+                    case 'b':
+                    document.write(" b.Imprimir los números impares entre 0 y 100.<br>")
+                        document.write("los números impares entre 0 y 100 son." + impares());
+                        break;
+                     case 'c':
+                     document.write("c.Imprimir los números pares del 1 al 100.<br>")
+                        document.write("los números pares del 1 al 100 son:" + pares());
+                        break;
+                    case 'd':
+                    document.write(" d.Escribir un programa que imprima por pantalla los cuadrados de los números del 1 al 30.<br>")
+                    document.write(" los cuadrados de los números del 1 al 30 son:<br>");
+                    cuadrados().forEach(item => {
+                    document.write(`<li>${item}</li>`);
+                     });
+                      
+                
+                        break;
+                    case 'e':
+                    document.write("e.Escribir un programa que sume los cuadrados de los cien primeros números naturales, mostrando el resultado en pantalla.<br>")
+                        document.write("la suma de los cuadrados de los cien primeros números naturales" + suma_cuadrados());
+                        break;
+                    case 'f':
+                    document.write(" f.Dados dos números naturales, el primero menor que el segundo, generar y mostrar todos los números comprendidos entre ellos en secuencia ascendente.<br>")
+                        document.write("" + dos_numero());
+                        break;
+                    case 'g':
+                    document.write("g.Sumar todos los números que se digitan por teclado mientras no sea cero.<br>")
+                        document.write("la suma de los numeros es:  " + suma_numeros());
+                        break;
+                        
+
+                }
+                break;
+            case 4:
+                document.write("Saliendo del programa...");
+                break;
+            default:
+                document.write("Opción no válida");
+        }
+    </script>
+</body>
+
+</html>
