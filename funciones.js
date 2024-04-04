@@ -216,8 +216,8 @@ function año(){
 
 function multiplo3() {
     let resultados = [];
-    for (let i = 0; i <= 100; i += 3) {
-        resultados.push(i);
+    for (let i = 3; i <= 100; i += 3) {
+        resultados+= i +"";
     }
     return resultados;
 }
@@ -225,30 +225,33 @@ function multiplo3() {
 function impares(){
     let resultados = [];
     for(let i = 1; i < 101; i+=2){
-        resultados.push(i);
+        resultados+= i +"";
     }
     return resultados;
 }
 
 function pares(){
     let resultados = [];
-    for(let i = 0; i < 101 ; i+=2){
-        resultados.push(i);
+    for(let i = 2; i < 101 ; i+=2){
+        resultados+= i +"";
+        
     }
     return resultados; 
 
 }
 
 
+
+
 function cuadrados() {
-    let cuadrado = [];
-    for (let numero of Array.from({length: 31}, (_,numero) => parseInt(numero) + 1)) {
-        cuadrado.push(`El cuadrado de ${numero} es ${numero*numero}`);
+    let resultados = [];
+    for (let i = 1; i <= 30; i++) {
+        let cuadrado = i * i;
+         document.write("El cuadrado de " + i + " es " + cuadrado + "<br>");
     }
-    return cuadrado;
+    return resultados;
 }
-
-
+ 
 
 function suma_cuadrados(){
     let suma = 0;
@@ -259,7 +262,7 @@ function suma_cuadrados(){
     return suma;
 }
 
-function dos_numero(){
+function dos_numero() {
     let uno = parseInt(prompt("Ingrese un número"));
     let dos = parseInt(prompt("Ingrese el segundo número"));
     let no = ("El primer número debe ser menor que el segundo.");
@@ -267,15 +270,15 @@ function dos_numero(){
         return no;
     }
     
-    let numerosEntre = [];
+    let numentre = "";
     let i = uno + 1; 
     while (i < dos) {
-        numerosEntre.push(i);
+        numentre+= i + " ";
         i++;
     }
-    let numer="Los números entre "+ uno+ " y "+dos+ " son:"+ numerosEntre;
+    let numer = "Los números entre " + uno + " y " + dos + " son: " + numentre;
     return numer;
-   }
+}
 
 
 function suma_numeros(){
@@ -291,6 +294,7 @@ function suma_numeros(){
 
 
 }
+
 
 
 
